@@ -1,0 +1,21 @@
+<body>
+    <section class="tWrap">
+    <div class="tBloc">
+    {#tweets}
+        {@lt key="{$idx}" value=5}
+        <h3>{user.screen_name}</h3>
+        <p>{text|s|j}</p>
+        {/lt}
+    {/tweets}
+    </div>
+    <div class="tBloc">
+    {#tweets}
+        {@gt key="{$idx}" value=4}
+        <h3>{user.screen_name}</h3>
+        <p>{text|s|j}</p>
+        {/gt}
+    {/tweets}
+    </div>
+  </section>
+</body>
+</html>
